@@ -6,21 +6,23 @@ VAR
     sentence:STRING;
 BEGIN
     READ(sentence);
-    for i from 1 to (sentence.length)-1 DO
-    if(sentence[i]!=" ")
+    for i from 0 to (sentence.length)-1{
+    if((sentence[i]!==" ")&&(sentence[0]!=" "))
         counter1+=1;
+        }
     Write ("sentence length is : "+counter1);
 
-    for j from 1 to (sentence.length)-1 DO
-    if(Sentence[j-1]=" ")
+    for j from 0 to (sentence.length)-1 {
+    if((Sentence[j-1]==" ")&&(sentence[0]!=" "))
     counter2+=1;
+    }
     Write("the number of words is :"+counter2);
 
-    for(k from 1 to (sentence.length)-1) DO
+    for(k from 0 to (sentence.length)-1){
     if(sentence[k]=='a' || sentence[k]=='A' || sentence[k]=='e' || sentence[k]=='E' ||
         sentence[k]=='i' || sentence[k]=='I' || sentence[k]=='o' || sentence[k]=='O' ||
         sentence[k]=='u' || sentence[k]=='U')
-        counter3+=1;
+        counter3+=1;}
         Write("the number of vowels is : "+counter3);
 
     
